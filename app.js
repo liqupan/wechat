@@ -24,6 +24,10 @@ app.get('/', function (req, res) {
   res.send('我不喜欢你');
 });
 
+app.get('/test', function (req, res) {
+  res.send('test ok');
+});
+
 app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   console.log("app running");
 });
