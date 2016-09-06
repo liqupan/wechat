@@ -13,7 +13,7 @@ var config = {
 app.use(express.query());
 app.use('/wechat', wechat(config, function (req, res, next) {
   var message = req.weixin;
-  if (message.FromUserName === '你好') {
+  if (message.Content === '你好') {
     res.reply('我不好');
   } else {res.reply('不想理你')
   }
